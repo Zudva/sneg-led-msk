@@ -9,15 +9,22 @@ export const Start: FC = () => {
         ЛЕДЯНАЯ КИНОЛЕНТА
       </h1>
       <div className={'grid grid-rows-[auto,1fr] grid-cols-2 gap-[8px] mb-[11px]'}>
-        <Button variant={'big'} color={'red'}>
-          ПЛАН ПЛОЩАДИ
-        </Button>
-        <Button variant={'big'} color={'red'}>
-          РЕТРО- СПЕКТИВА
-        </Button>
-        <Button variant={'big'} color={'green'} className={'col-span-2'}>
-          ВИДЕО
-        </Button>
+        <a className='' href='#square-plan'>
+          <Button variant={'big'} color={'red'}>
+            ПЛАН ПЛОЩАДИ
+          </Button>
+        </a>
+
+        <a className='' href='#retrospective'>
+          <Button variant={'big'} color={'red'}>
+            РЕТРО- СПЕКТИВА
+          </Button>
+        </a>
+        <a className='col-span-2' href='#video'>
+          <Button variant={'big'} color={'green'} className='w-full'>
+            ВИДЕО
+          </Button>
+        </a>
       </div>
       <h2 className="text-white text-center font-roboto text-[14px] font-normal leading-[14px]">
         Кинематографическая ретроспектива, вдохновлённая историей Мосфильма
