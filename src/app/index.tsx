@@ -1,13 +1,15 @@
-import {Start} from "../sections";
-
+import { Footer, Retrospective, SquarePlan, Start, Video } from '../sections';
 
 function App() {
-
   return (
     <>
-        <Start />
+      <Start />
+      <Video />
+      <SquarePlan />
+      <Retrospective />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,14 +1,27 @@
-import {FC} from "react";
+import { FC } from 'react';
+import { Button } from '../../components';
 
-
-const Start: FC = () => {
-
-    return (
-        <div className='relative'>
-            <img className='absolute top-0 left-0 w-full' src="images/main.png" alt="start" />
-            <h3 className='pt-[400px] text-center'>ЛЕДЯНАЯ КИНОЛЕНТА</h3>
-        </div>
-    )
-}
-
-export default Start
+export const Start: FC = () => {
+  return (
+    <section className="relative container px-[15px] pb-[72.5px]">
+      <img className="absolute top-0 left-0 w-full z-[-1]" src="images/main.png" alt="start" />
+      <h1 className="relative z-2 pt-[247px] text-[18px] font-medium leading-[17px] text-center text-white mb-[170px]">
+        ЛЕДЯНАЯ КИНОЛЕНТА
+      </h1>
+      <div className={'grid grid-rows-[auto,1fr] grid-cols-2 gap-[8px] mb-[11px]'}>
+        <Button variant={'big'} color={'red'}>
+          ПЛАН ПЛОЩАДИ
+        </Button>
+        <Button variant={'big'} color={'red'}>
+          РЕТРО- СПЕКТИВА
+        </Button>
+        <Button variant={'big'} color={'green'} className={'col-span-2'}>
+          ВИДЕО
+        </Button>
+      </div>
+      <h2 className="text-white text-center font-roboto text-[14px] font-normal leading-[14px]">
+        Кинематографическая ретроспектива, вдохновлённая историей Мосфильма
+      </h2>
+    </section>
+  );
+};

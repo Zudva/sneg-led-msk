@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #004243;
+    color: white;
+}
+
+:root {
+    --red-buttons: #CD0000;
+    --light-green:#306F5E;
+    --middle-green: #13544D;
+    --dark-green: #004243;
+}
