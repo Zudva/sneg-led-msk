@@ -7,6 +7,7 @@ declare type FilmModel = {
 declare type FilmFullModel = {
   title: string;
   coverSrc?: string;
+  modalSrc?: string;
   facts: string[];
   director: string;
   year: string;
