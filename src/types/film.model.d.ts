@@ -1,10 +1,5 @@
-declare type FilmModel = {
-  title: string;
-  coverSrc?: string;
-  year: string;
-};
-
 declare type FilmFullModel = {
+  id: number;
   title: string;
   coverSrc?: string;
   modalSrc?: string;
