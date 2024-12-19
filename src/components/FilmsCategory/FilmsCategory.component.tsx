@@ -35,7 +35,7 @@ export const FilmsCategory = ({ titleCategory, films }: Props) => {
       <h2 className="max-w-[200px] uppercase text-center text-[18px] font-medium leading-[17px] mb-[28px]">
         {titleCategory}
       </h2>
-      <ul className={'flex flex-wrap gap-[8px] gap-y-[16px] justify-center mb-[23px]'}>
+      <ul className={'flex flex-wrap gap-[8px] w-full gap-y-[16px] justify-center mb-[23px]'}>
         {films
           .slice(0, visibleFilmsCount)
           .map(({ id, title, coverSrc, year, modalSrc, director, facts, quote }, index) => (

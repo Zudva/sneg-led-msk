@@ -10,7 +10,8 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const Button = ({ color, variant, children, onClick, className, ...props }: Props) => {
-  const baseClass = ' text-white text-[18px] leading-[17px]';
+  const baseClass =
+    ' text-white text-[18px] leading-[17px] transform transition-transform duration-200 active:scale-90';
   const colorClass = {
     red:
       variant === 'big'

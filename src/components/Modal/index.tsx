@@ -1,6 +1,4 @@
-
-
-import React from "react";
+import React from 'react';
 import CloseIcon from '../../icons/close.svg';
 
 interface ModalProps {
@@ -10,11 +8,17 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white shadow-lg w-full h-screen overflow-y-scroll relative z-100">
+    <div
+      className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${
+        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+    >
+      <div
+        className={`bg-white shadow-lg w-full h-screen overflow-y-scroll relative z-100 transform transition-transform duration-500 ${
+          isOpen ? 'translate-y-0' : 'translate-y-full'
+        }`}
+      >
         <button
           onClick={onClose}
           className="absolute top-[10px] right-[15px] text-gray-400 hover:text-gray-600 z-10"

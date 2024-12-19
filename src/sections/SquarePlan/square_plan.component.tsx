@@ -3,7 +3,7 @@ import { PlanWithCategory } from '../../components';
 
 export const SquarePlan = () => {
   return (
-    <section id={'square-plan'} className="container px-[15px] pb-[40px] pt-[20px]">
+    <section id={'square-plan'} className="container scroll-smooth px-[15px] pb-[40px] pt-[20px]">
       <h2 className="text-center text-[18px] font-medium leading-[17px] uppercase mb-[36px]">
         фестиваль
         <br />
