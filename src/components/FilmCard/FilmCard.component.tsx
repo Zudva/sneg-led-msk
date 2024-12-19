@@ -12,7 +12,7 @@ export const FilmCard = ({ title, modalSrc, facts, director, year, quote }: Prop
     <>
       <section className="relative">
         <img src={modalSrc} alt={title} className="w-full" />
-        <h1 className="text-[11px] absolute left-[15px] bottom-[10px]">
+        <h1 className="text-[11px] absolute left-[15px] bottom-[10px] max-w-[161px]">
           «{title}» {year}
         </h1>
       </section>
@@ -23,7 +23,9 @@ export const FilmCard = ({ title, modalSrc, facts, director, year, quote }: Prop
         </p>
 
         <blockquote className="text-[14px] my-[20px] p-[10px] bg-[var(--middle-green)] rounded-[7px] italic">
-          {quote}
+          {quote.split('\n').map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
         </blockquote>
 
         <p className="capitalize text-[18px] font-bold mb-[9px]">ИНТЕРЕСНЫЕ ФАКТЫ</p>

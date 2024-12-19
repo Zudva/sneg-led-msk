@@ -41,11 +41,14 @@ export const FilmsCategory = ({ titleCategory, films }: Props) => {
           .map(({ id, title, coverSrc, year, modalSrc, director, facts, quote }, index) => (
             <>
               <li key={index} className={'w-[48.5%]'} onClick={() => handleModalOpen(id)}>
-                <figure className="flex flex-col gap-[8px] relative">
-                  <img src={coverSrc} alt={title} className="w-full h-[223px]" />
-                  <span className="absolute bottom-8 right-[9px] bg-[rgba(0,_0,_0,_0.85)] py-[1px] px-[8px] rounded-[2px] text-[11px] font-normal leading-[13px]">
-                    {year}
-                  </span>
+                <figure className="flex flex-col gap-[8px] ">
+                  <div className="relative">
+                    <img src={coverSrc} alt={title} className="w-full h-[223px]" />
+                    <span className="absolute bottom-[9px] right-[9px] bg-[rgba(0,_0,_0,_0.85)] py-[1px] px-[8px] rounded-[2px] text-[11px] font-normal leading-[13px]">
+                      {year}
+                    </span>
+                  </div>
+
                   <figcaption className="text-[14px] font-normal leading-[14px]">
                     {title}
                   </figcaption>
